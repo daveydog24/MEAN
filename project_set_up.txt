@@ -1,0 +1,16 @@
+make a package.json file:
+yourcommandline> npm init -y
+yourcommandline> npm install express --save
+yourcommandline> npm install ejs --save
+yourcommandline> npm install body-parser --save
+yourcommandline> npm install mongoose --save
+and any more examples
+
+folders in project
+views
+    index.ejs
+static
+    css, js, html
+routes
+    export index.js or routes js for server
+server.js 
