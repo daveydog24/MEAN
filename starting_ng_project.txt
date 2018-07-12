@@ -1,0 +1,39 @@
+                                                * angular commands *    
+ng new <project name> 
+cd <project name> 
+ng serve = starts server
+ng serve -- open = starts server and opens in browser
+ng generate component my-component = Creates a component
+ng generate service my-service = Creates a service
+ng generate class my-class = Creates a class
+
+Always import....... 
+    FormsModule - Utilized for Angular forms (almost all assignments will need this module).
+    HttpModule - Utilized for Angular HTTP requests to any API.
+
+ 
+import { NgModule } from '@angular/core'; 
+import { BrowserModule } from '@angular/platform-browser'; 
+import { AppComponent } from './app.component'; 
+import { FormsModule } from '@angular/forms'; // <-- Import FormsModule
+import { HttpModule } from '@angular/http'; // <-- Import HttpModule
+
+@NgModule({ 
+	declarations: [ 
+		AppComponent
+	], 
+	imports: [
+		BrowserModule,
+		FormsModule, // <-- Include module in our AppModules
+		HttpModule // <-- Include module in our AppModules
+	], 
+	providers: [], 
+	bootstrap: [AppComponent] 
+}) 
+export class AppModule { }
+
+*****************************************************************************************
+        When importing new modules, ensure you first import them from the specific 
+        library as shown above, and then include the imported modules within 
+        the imports array.
+*****************************************************************************************
