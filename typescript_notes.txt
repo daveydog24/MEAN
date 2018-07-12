@@ -1,0 +1,83 @@
+
+
+
+What benefits does it offer the developers?
+TypeScript offers many additional features to help us become more efficient and effective.
+
+(*) - top 6 features
+
+(*) Basic Types
+(*) Variable Declarations
+(*) Interfaces
+(*) Classes
+(*) Functions
+Generics
+Enums
+Type Inference
+Type Compatibility
+Advanced Types
+Symbols
+Iterators and Generators
+(*) Modules
+Namespaces
+Decorators
+JSX
+
+CODE WILL ALWAYS BE RAN IN JAVASCRIPT 
+    -good news is tyescript works backwards comptabale and can go from es6 to es5 
+    - great webstie        www.typescriptlang.org 
+                        playground - great tool to use 
+                    - type typescript on the left and see JS on the right
+
+Basic types
+    // Strings
+    var myString: string = "This is a string";
+    
+    // Numbers
+    var myNumber: number = 7;
+    
+    // Boolean
+    var myBoolean: boolean = true;
+    
+    // Array of  Numbers 
+    var arrayOfNumbers: number[];
+
+    // (alternative way)
+    var arrayOfNumbers: Array<number>
+
+    // any (assign to any type, and change to any type, anytime)
+    var anything: any = 7;
+
+Variable Declarations are used to better scope our variables. 
+    var - This means that if we know a variable only needs to be used within a function
+    let - further limit the scope of a variable to a block (such as an if statement, or a for loop)
+    const  If we create a variable of which we know will never change its value,
+
+ 
+// Never type (will never reach the end of the function)
+function errorHandler(message: string): never{
+	throw new Error(message);
+}
+// Void (returns nothing) 
+function printValue(val: string): void{
+	console.log(val);
+	return; //  <----- dont really need this 
+}
+// returns what you defined below vvvv
+function printValue(val: string): number{
+	console.log(val);
+	return number; //  <------    ^^^^^^ returns whats definded above (string, boolean, number)
+}
+
+class SLNode { //JS actually doesnt have classes this is "syntatical sugar" as theye cal lit 
+                //they are actually function constructors that include prototypes.
+	val: number; //defines the variable 
+	
+	constructor(valueP: number){ //constructor class helps store the new class values you pass in 
+		this.val = valueP;
+	}
+	doSomethingFun(){
+		console.log("This is FUN!");
+	}
+}
+let firstSLNode = new SLNode(1);
