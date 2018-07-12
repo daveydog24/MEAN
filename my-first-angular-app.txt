@@ -1,0 +1,6 @@
+npm install -g @angular/cli  //install a ton of modules
+ng new first-angular-app   // creates new angular app
+cd first-angular-app    // navigates to the new app
+ng serve -- open // starts app on a server (4200) and opens it in a browser
+
+the file is way too big to upload 
